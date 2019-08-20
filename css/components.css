@@ -1,0 +1,348 @@
+/* ==========LOGO============ */
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Monoton', cursive;
+    color: rgb(255, 255, 255, .7);
+    margin-left: 2rem;
+    flex: 0 0 20%;
+    border-radius: .5rem;
+}
+
+.logo__img {
+    background-color: rgb(241, 198, 7);
+    height: 5rem;
+    width: 5rem;
+    padding: .5rem;
+    border: .15rem solid rgb(20, 20, 20);
+    box-shadow: 3px 3px 8px rgb(20, 20, 20)
+}
+
+.logo__name {
+    margin: 1rem;
+    font-size: 2.2rem;
+    color: rgb(177, 177, 177);
+    font-weight: 550;
+    box-shadow: 0 5px 8px rgb(20, 20, 20, .2);
+    padding-right: .6rem;
+    text-decoration: underline rgb(148, 148, 148);
+}
+
+/* ==========SEARCH============ */
+
+/* =====input====== */
+
+.search {
+    flex: 0 0 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: rgb(41, 41, 41);
+    background-color: rgba(136, 136, 136, 0.7);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.5rem;
+}
+
+.search__input:focus {
+    background-color: rgba(151, 151, 151, 0.7);
+    outline: none;
+    width: 100%;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: rgb(41, 41, 41);
+}
+
+/* ==========USER NAVIGATION============ */
+
+.user-nav {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.user-nav__surname {
+    margin-right: 2rem;
+}
+
+.user-nav__photo {
+    height: 4.5rem;
+    border-radius: 50%;
+    box-shadow: 4px 4px 8px rgb(37, 37, 37);
+}
+
+.user-nav__name {
+    margin-left: 1rem;
+    margin-right: .5rem;
+}
+
+.fas {
+    height: 2rem;
+}
+
+/* ================SIDE NAVIGATION========================= */
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+}
+
+.side-nav__item {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.side-nav__button {
+    color: rgba(151, 151, 151, 0.7);
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    background: none;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    outline: none;
+}
+
+#film,
+#tv {
+    color: rgba(151, 151, 151, 0.7);
+}
+
+.side-nav__button-active {
+    color: rgb(241, 198, 7);
+    background-color: rgb(4, 4, 24);
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    transform: scaleY(1);
+    display: flex;
+    justify-content: flex-start;
+}
+
+#film-active {
+    color: rgba(247, 47, 47, 0.664);
+    background-color: rgb(4, 4, 24);
+}
+
+#tv-active {
+    color: rgb(68, 68, 247);
+    background-color: rgb(4, 4, 24);
+}
+
+#film:hover {
+    color: rgba(247, 47, 47, 0.664);
+    background-color: rgb(4, 4, 24)
+}
+
+#tv:hover {
+    color: rgb(68, 68, 247);
+    background-color: rgb(4, 4, 24)
+}
+
+.side-nav__button:hover,
+#favorites:hover {
+    color: rgb(241, 198, 7);
+    background-color: rgb(4, 4, 24)
+}
+
+#film::before,
+#film-active::before {
+    background-color: rgba(247, 47, 47, 0.664);
+}
+
+#tv::before,
+#tv-active::before {
+    background-color: rgb(68, 68, 247);
+}
+
+.side-nav__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: rgb(241, 198, 7);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.side-nav__button-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: rgb(241, 198, 7);
+    transform: scaleY(1);
+}
+
+.side-nav__button:hover::before {
+    transform: scaleY(1);
+}
+
+.fas {
+    margin-right: 2rem;
+}
+
+/* ================LEGAL=========================== */
+
+.legal {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+/* ===============POSTER============================= */
+
+.poster-view {
+    min-height: 50rem;
+    padding: .5rem 1rem 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.poster-view__container {
+    position: relative;
+    width: 12.5rem;
+    height: 18.5rem;
+    margin: 1rem .5rem 0.1rem .5rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.poster-view .poster-view__container .imgBox {
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-view .poster-view__container .imgBox .img {
+    max-width: 100%;
+    transition: transform 2s;
+    height: 18.5rem;
+}
+
+.poster-view .poster-view__container:hover .imgBox .img {
+    transform: scale(1.2);
+    height: 18.5rem;
+}
+
+.poster-view .poster-view__container .container-details {
+    position: absolute;
+    padding: .5rem;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: rgba(4, 4, 24, 0.9);
+    color: rgb(252, 253, 253);
+    text-align: center;
+    transform: scaleY(0);
+    transition: transform .7s;
+}
+
+.poster-view .poster-view__container:hover .container-details {
+    transform: scaleY(1);
+}
+
+.name {
+    height: 6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(241, 198, 7);
+}
+
+.container-btn,
+.container-btn-added:hover,
+#tv-fav:hover,
+#movie-fav:hover {
+    padding: .4rem;
+    background: none;
+    background-color: transparent;
+    border: .1rem solid rgb(252, 253, 253);
+    color: rgb(252, 253, 253);
+    text-decoration: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: .5s;
+}
+
+.container-btn:hover,
+.container-btn-added {
+    padding: .4rem;
+    background: none;
+    background-color: rgb(241, 198, 7);
+    border: .1rem solid rgb(241, 198, 7);
+    color: rgb(4, 4, 24);
+    text-decoration: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#tv-fav {
+    background-color: rgb(68, 68, 247);
+    border: .1rem solid rgb(68, 68, 247);
+    color: rgb(252, 253, 253);
+}
+
+#movie-fav {
+    background-color: rgba(247, 47, 47, 0.664);
+    border: .1rem solid rgba(247, 47, 47, 0.664);
+    color: rgb(252, 253, 253);
+}
+
+/* ===============PAGE SELECTOR======================== */
+
+.container__page {
+    height: 4.2rem;
+    padding: .5rem 0 1rem 0;
+}
+
+.page-selects {
+    display: flex;
+    justify-content: center;
+}
+
+#current-page {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 1rem 0 1rem;
+    color: rgb(177, 177, 177);
+}
+
+#next-page,
+#previous-page {
+    font-size: 2rem;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    color: rgb(177, 177, 177);
+    outline: none;
+}
+
+#next-page:hover,
+#previous-page:hover {
+    color: rgb(241, 198, 7);
+}

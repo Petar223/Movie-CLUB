@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Movie CLUB</title>
+  <script src="https://kit.fontawesome.com/a83dceaa12.js"></script>
+  <link rel="stylesheet" href="./css/custom-style.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Black+Han+Sans|Bowlby+One|Gravitas+One|Monoton&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="./img/film-logo-4.png" alt="movie-search-logo" class="logo__img" />
+        <p class="logo__name">Movie CLUB</p>
+      </div>
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search" />
+      </form>
+      <nav class="user-nav">
+        <img src="img/face-holder.png" alt="user photo" class="user-nav__photo" />
+        <span class="user-nav__name">Name</span>
+        <span class="user-nav__surname">Surname</span>
+      </nav>
+    </header>
+    <div class="content">
+      <nav class="sidebar">
+        <ul class="side-nav">
+          <li class="side-nav__item">
+            <button id="film" class="side-nav__button">
+              <i class="fas fa-film"></i>
+              <span>Movies</span>
+            </button>
+          </li>
+          <li class="side-nav__item">
+            <button id="tv" class="side-nav__button">
+              <i class="fas fa-tv"></i>
+              <span>TV Shows</span>
+            </button>
+          </li>
+
+          <li class="side-nav__item">
+            <button id="favorites" class="side-nav__button">
+              <i class="fas fa-heart"></i>
+              <span>Favorites</span>
+            </button>
+          </li>
+        </ul>
+        <div class="legal">
+          &copy; 2019 by Petruska.
+        </div>
+      </nav>
+      <main class="poster-view">
+
+      </main>
+    </div>
+    <div class="container__page">
+
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
