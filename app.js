@@ -21,8 +21,12 @@ let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 let pageCount = 1;
 
 document.addEventListener('DOMContentLoaded', function () {
+  if (JSON.parse(localStorage.getItem('favorites')) === null) {
+    localStorage.setItem('favorites', JSON.stringify([]));
+  }
   typeOfSelect('movie')
 })
+
 
 searchInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
